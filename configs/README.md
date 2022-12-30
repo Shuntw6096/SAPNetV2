@@ -70,6 +70,8 @@ INPUT:
   MIN_SIZE_TEST: 600
 # optimizer setting, SGD is used in baseline training, Adam is used in SAP training
 SOLVER:
+  AMP:
+    ENABLED: False # True to enable AMP, domain adaptation trainer supprots AMP training
   NAME: "default" # optimizer name
   IMS_PER_BATCH: 1 # batch size
   # learning rate decay step
