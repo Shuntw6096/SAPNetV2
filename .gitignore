@@ -1,0 +1,5 @@
+datasets/
+__pycache__/
+pretrained/
+outputs/
+test_images/

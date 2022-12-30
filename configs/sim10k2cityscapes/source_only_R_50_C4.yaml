@@ -1,0 +1,34 @@
+_BASE_: "../Base-RCNN-C4.yaml"
+DATASETS:
+  SOURCE_DOMAIN:
+    TRAIN: ("sim10k_train",)
+  TARGET_DOMAIN:
+    TRAIN: ("cityscapes-car_train",)
+  TRAIN: ("sim10k_train",)
+  TEST: ("cityscapes-car2_val",)
+MODEL:
+  META_ARCHITECTURE: "SAPRCNN"
+  BACKBONE:
+    FREEZE_AT: 1
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  KEYPOINT_ON: False
+  MASK_ON: False
+  DOMAIN_ADAPTATION_ON: False
+  ROI_HEADS:
+    NUM_CLASSES: 1
+  PROPOSAL_GENERATOR:
+    NAME: "SAPRPN"
+INPUT:
+  MIN_SIZE_TRAIN: (600,)
+  MIN_SIZE_TRAIN_SAMPLING: "choice"
+  MIN_SIZE_TEST: 600
+SOLVER:
+  IMS_PER_BATCH: 1 # batch size
+  STEPS: (80000, 110000)
+  BASE_LR: 0.001
+  MAX_ITER: 120000
+  CHECKPOINT_PERIOD: 2000
+TEST:
+  EVAL_PERIOD: 2000
+VIS_PERIOD: 2000
+SEED: 57

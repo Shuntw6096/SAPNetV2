@@ -1,0 +1,1 @@
+python tools/train_net.py --config-file "configs/cityscapes2foggy/source_only_R_50_C4.yaml" --num-gpus 1 --setting-token "city2foggy_source_only"
