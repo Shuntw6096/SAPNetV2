@@ -126,7 +126,7 @@ Configuration files for ablation are under `configs/*/ablation/`
 * `scripts/*/mscam.sh` is to train baseline method with MS-CAM which is implemented in [here](detection/da_heads/mscam.py)
 
 # Acknowledgement
-* [SapNetDA](https://isrc.iscas.ac.cn/gitlab/research/domain-adaption)
+* [SAPNetDA](https://isrc.iscas.ac.cn/gitlab/research/domain-adaption)
 * [Detectron2](https://github.com/facebookresearch/detectron2)
 * [Grad-CAM.pytorch](https://github.com/yizt/Grad-CAM.pytorch)
 * Professor Yie Tarng Chen, lab
