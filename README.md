@@ -1,5 +1,6 @@
 # A Detectron2 Implementation of SAPNetV2
-
+Code release for the paper:  
+[The study of unsupervised domain adaptation for object detection using spatial attention pyramid networks](https://drive.google.com/file/d/1hmyIorjThvB3EUgguiwzpLbt7K53vtJw/view)
 ## Overall Architecture
 <img src='./docs/overall-framework.jpg' width=900>
 Overall framework of proposed method. The detector should be pretrained on the source domain, both domain data and detector including domain classifier are involved in the domain adaptation stage. In test phase, detector excluding domain classifier infers on target domain test set. Source domain data in the domain adaptation stage can be replaced with target-like source domain images which are source domain images with target domain style
